@@ -59,6 +59,11 @@ export function checkPasswordAndThrowReason(password){
         throw new Error('Password must contain at least one digit')
     }
 
+    // passwords can't contain the ! character:
+    if (/!/.test(password)) {
+        throw new Error('Password cannot contain the ! character')
+    }
+
     if (!/[^A-Za-z0-9]/.test(password)) {
         throw new Error('Password must contain at least one special character')
     }

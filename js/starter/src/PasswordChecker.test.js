@@ -45,34 +45,41 @@ describe('checkPasswordAndThrowReason function', () => {
   });
 
   test('throws error for password shorter than 8 characters', () => {
-    assert.throws(() => checkPasswordAndThrowReason('Short1!'), {
+    assert.throws(() => checkPasswordAndThrowReason('Short1@'), {
       message: 'Password must be at least 8 characters long'
     });
   });
 
   test('throws error for password longer than 20 characters', () => {
-    assert.throws(() => checkPasswordAndThrowReason('ThisPasswordIsWayTooLong123!'), {
+    assert.throws(() => checkPasswordAndThrowReason('ThisPasswordIsWayTooLong123@'), {
       message: 'Password must be at most 20 characters long'
     });
   });
 
   test('throws error for password without uppercase letter', () => {
-    assert.throws(() => checkPasswordAndThrowReason('lowercase123!'), {
+    assert.throws(() => checkPasswordAndThrowReason('lowercase123@'), {
       message: 'Password must contain at least one uppercase letter'
     });
   });
 
   test('throws error for password without lowercase letter', () => {
-    assert.throws(() => checkPasswordAndThrowReason('UPPERCASE123!'), {
+    assert.throws(() => checkPasswordAndThrowReason('UPPERCASE123@'), {
       message: 'Password must contain at least one lowercase letter'
     });
   });
 
   test('throws error for password without digit', () => {
-    assert.throws(() => checkPasswordAndThrowReason('NoDigits!'), {
+    assert.throws(() => checkPasswordAndThrowReason('NoDigits@'), {
       message: 'Password must contain at least one digit'
     });
   });
+
+  // test for ! char:
+  test('throws error for password containing the ! character', () => {
+    assert.throws(() => checkPasswordAndThrowReason('NoSpecialChar123!'), {
+      message: 'Password cannot contain the ! character'
+    });
+  })
 
   test('throws error for password without special character', () => {
     assert.throws(() => checkPasswordAndThrowReason('NoSpecialChar123'), {
