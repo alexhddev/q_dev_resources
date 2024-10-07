@@ -49,7 +49,7 @@ def validate_password_and_raise_reason(password):
 
 
 
-def validate_password_and_raise_reason(password):
+def validate_password_and_raise_reason_regex(password):
     # Check length
     if len(password) < 8:
         raise ValueError("Password must be at least 8 characters long")
