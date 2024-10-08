@@ -1,11 +1,11 @@
 # Generate a virtual environment
 ```bash
-python -m venv venv
+python -m venv env
 ```
 
 # Activate the virtual environment for Linux
 ```bash
-source venv/bin/activate
+source env/bin/activate
 ```
 
 # Activate the virtual environment for Windows
