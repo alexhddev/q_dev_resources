@@ -30,6 +30,11 @@ resource "aws_iam_role_policy_attachment" "js_message_lambda_policy_attachment" 
     policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }
 
+resource "aws_iam_role_policy_attachment" "js_message_lambda_role_policy_attachment" {
+    role = aws_iam_role.js_message_lambda_role.name
+    policy_arn = aws_iam_policy.messages_bucket_access_lambda_policy.arn
+}
+
 resource "aws_lambda_function" "js_message_lambda" {
     function_name = "js-message-lambda"
     role = aws_iam_role.js_message_lambda_role.arn

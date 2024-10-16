@@ -3,3 +3,9 @@
 GET {{url}}/messages
 ###
 POST {{url}}/messages
+Content-Type: application/json
+
+{
+    "message": "Hello World!"
+}
+###
