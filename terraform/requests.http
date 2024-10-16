@@ -1,0 +1,5 @@
+@url = https://4yenekij9k.execute-api.eu-central-1.amazonaws.com/dev
+
+GET {{url}}/messages
+###
+POST {{url}}/messages
