@@ -3,7 +3,7 @@
 resource "aws_apigatewayv2_integration" "messages_integration" {
     api_id = aws_apigatewayv2_api.messages_api.id
     integration_type = "AWS_PROXY"
-    integration_uri = aws_lambda_function.py_message_lambda.invoke_arn
+    integration_uri = aws_lambda_function.js_message_lambda.invoke_arn
     integration_method = "POST"
 }
 
@@ -25,7 +25,7 @@ resource "aws_apigatewayv2_route" "post_messages_route" {
 resource "aws_lambda_permission" "messages_api_lambda_permission" {
     statement_id = "AllowExecutionFromAPIGateway"
     action = "lambda:InvokeFunction"
-    function_name = aws_lambda_function.py_message_lambda.function_name
+    function_name = aws_lambda_function.js_message_lambda.function_name
     principal = "apigateway.amazonaws.com"
     source_arn = "${aws_apigatewayv2_api.messages_api.execution_arn}/*/*"
 }
