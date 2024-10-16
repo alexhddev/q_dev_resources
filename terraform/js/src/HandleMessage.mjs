@@ -11,10 +11,11 @@ async function handler(event, context) {
                 // get all the files in the bucket
                 const listObjectsCommand = new ListObjectsV2Command({ Bucket: messagesBucket });
                 const response = await s3Client.send(listObjectsCommand);
+                const objectsKeys = response.Contents.map(obj => obj.Key);
     
                 return {
                     statusCode: 200,
-                    body: JSON.stringify(response.Contents)
+                    body: JSON.stringify(objectsKeys)
                 };
             case 'POST':
                 if (event.body) {
@@ -26,7 +27,7 @@ async function handler(event, context) {
                     const response = await s3Client.send(command);
                     return {
                         statusCode: 200,
-                        body: JSON.stringify({ message: 'File uploaded successfully', response })
+                        body: JSON.stringify({ message: 'File uploaded successfully' })
                     };
                 }
                 break;
