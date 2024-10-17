@@ -1,9 +1,11 @@
 import { PutObjectCommand, S3Client, ListObjectsV2Command } from "@aws-sdk/client-s3";
-
+import { v4 } from 'uuid'
 const s3Client = new S3Client()
 const messagesBucket = process.env.MESSAGES_BUCKET
 
 async function handler(event, context) {
+
+    console.log('UUID: ' + v4());
 
     try {
         switch (event.httpMethod) {
