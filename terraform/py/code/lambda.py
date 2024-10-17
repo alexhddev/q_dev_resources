@@ -3,13 +3,17 @@ from boto3 import resource
 import os
 import json
 import time
+import requests
 
 s3_client = resource('s3')
 bucket_name = os.environ['MESSAGES_BUCKET']
 
 # simple handler for aws lambda
 def handler(event, context):
-    
+
+    # print the requests version:
+    print(requests.__version__)
+
     try:
         method = event['httpMethod']
         
