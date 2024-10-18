@@ -1,0 +1,14 @@
+name: first CI 
+
+on:
+  push:
+    branches: [ cicd ]
+  pull_request:
+    branches: [ cicd ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
