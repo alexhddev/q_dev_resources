@@ -1,0 +1,27 @@
+# basic workflow
+
+name: first CI 
+
+on:
+  push:
+    branches: [ cicd ]
+  pull_request:
+    branches: [ cicd ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: print java version
+      run: java -version
+    - name: print maven version
+      run: mvn -v
+    - name: print node version
+      run: node -v
+    - name: print npm version
+      run: npm -v
+    - name: print python version
+      run: python --version
+    - name: print pip version
