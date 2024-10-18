@@ -30,4 +30,6 @@ jobs:
       run: echo "installing dependencies"
 
     - name: Run tests
-      run: pytest
+    # run all the test files that end with _test.py
+      run: python -m unittest discover -p "*_test.py"
+     
