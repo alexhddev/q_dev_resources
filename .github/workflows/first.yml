@@ -1,5 +1,4 @@
-# basic workflow
-
+# basic workflow to print versions of java, maven, node, npm, python, pip
 name: first CI 
 
 on:
