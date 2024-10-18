@@ -14,12 +14,13 @@ jobs:
     - uses: actions/checkout@v4
     - name: print java version
       run: java -version    
-    # - name: print maven version
-    #   run: mvn -v
-    # - name: print node version
-    #   run: node -v
-    # - name: print npm version
-    #   run: npm -v
-    # - name: print python version
-    #   run: python --version
-    # - name: print pip version
+    - name: print maven version
+      run: mvn -v
+    - name: print node version
+      run: node -v
+    - name: print npm version
+      run: npm -v
+    - name: print python version
+      run: python --version
+    - name: print pip version
+      run: pip --version
