@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./java/passchecker
+        working-directory: ./python/pass_checker
     
     steps:
 
