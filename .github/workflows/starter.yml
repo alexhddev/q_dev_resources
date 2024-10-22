@@ -1,6 +1,6 @@
 name: First CICD
 
-on:
+# on:
   # push:
   #   branches: [ cicd-pr ]
   # pull_request:
