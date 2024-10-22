@@ -1,10 +1,10 @@
 name: First CICD
 
 on:
-  push:
-    branches: [ cicd-pr ]
-  pull_request:
-    branches: [ cicd-pr ]
+  # push:
+  #   branches: [ cicd-pr ]
+  # pull_request:
+  #   branches: [ cicd-pr ]
 
 jobs:
   build:
