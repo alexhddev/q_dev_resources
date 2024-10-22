@@ -10,6 +10,7 @@ export function checkPassword(password){
         return false
     }
 
+    
     if (password.length > 20) {
         return false
     }
