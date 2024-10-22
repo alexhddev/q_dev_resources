@@ -4,7 +4,7 @@ public class PasswordChecker {
 
     public boolean checkPassword(String password) {
         
-        if (password.length() < 8) {
+        if (password.length() < 12) {
             return false;
         }
 

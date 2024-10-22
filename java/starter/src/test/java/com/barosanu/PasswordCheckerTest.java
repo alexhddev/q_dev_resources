@@ -15,7 +15,7 @@ class PasswordCheckerTest {
 
     @Test
     void testValidPassword() {
-        assertTrue(passwordChecker.checkPassword("Valid1Pass!"));
+        assertTrue(passwordChecker.checkPassword("Valid1PassAAA!"));
     }
 
     @Test
