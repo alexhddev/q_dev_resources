@@ -7,7 +7,7 @@ resource "aws_iam_policy" "messages_bucket_access_lambda_policy" {
         Action = [
           "s3:GetObject",
           "s3:ListBucket",
-          "s3:PutObject"          
+          "s3:PutObject"
         ]
         Effect = "Allow"
         Resource = [
