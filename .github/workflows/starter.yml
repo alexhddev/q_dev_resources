@@ -1,0 +1,26 @@
+name: First CICD
+
+# on:
+  # push:
+  #   branches: [ cicd-pr ]
+  # pull_request:
+  #   branches: [ cicd-pr ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: print java version
+      run: java --version
+    - name: print mvn version
+      run: mvn --version
+    - name: print node version
+      run: node --version
+    - name: print npm version
+      run: npm --version
+    - name: print python version
+      run: python --version
+    - name: print pip version
+      run: pip --version
+    

@@ -1,0 +1,35 @@
+# basic java workflow
+name: Python application
+
+on:
+  push:
+    branches: [ cicd-pr ]
+  pull_request:
+    branches: [ cicd-pr ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./python/pass_checker
+    
+    steps:
+
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.10'
+
+    - name: Print Python version
+      run: python --version
+
+    - name: Install dependencies
+      run: echo "installing dependencies"
+
+    - name: Run tests
+    # run all the test files that end with _test.py
+      run: python -m unittest discover -p "*_test.py"
+     
