@@ -1,0 +1,30 @@
+# basic js workflow
+name: js CI with npm
+
+on:
+  push:
+    branches: [ cicd-pr ]
+  pull_request:
+    branches: [ cicd-pr ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./js/starter
+    
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+
+    - name: Install dependencies
+      run: npm install
+    - name: test with npm
+      run: npm test
+    
