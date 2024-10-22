@@ -63,7 +63,6 @@ jobs:
     defaults:
       run:
         shell: bash
-      run:
         working-directory: ./terraform
 
     steps:
