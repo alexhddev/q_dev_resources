@@ -23,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup terraform
+      - name: Setup terraform 
         uses: hashicorp/setup-terraform@v3
 
       - name: Configure AWS credentials
@@ -50,7 +50,7 @@ jobs:
 
       # run only for push events
       - name: Terraform Apply
-        if: github.event_name == 'push'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: terraform apply -auto-approve -input=false
 
       
