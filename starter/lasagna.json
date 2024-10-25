@@ -1,0 +1,79 @@
+{
+  "lasagna_ingredients": [
+    {
+      "name": "Lasagna noodles",
+      "quantity": "1 pound",
+      "required": true
+    },
+    {
+      "name": "Ground beef",
+      "quantity": "1 pound",
+      "required": true
+    },
+    {
+      "name": "Onion, diced",
+      "quantity": "1 medium",
+      "required": true
+    },
+    {
+      "name": "Garlic, minced",
+      "quantity": "2 cloves",
+      "required": true
+    },
+    {
+      "name": "Tomato sauce",
+      "quantity": "24 ounces",
+      "required": true
+    },
+    {
+      "name": "Crushed tomatoes",
+      "quantity": "14 ounces",
+      "required": true
+    },
+    {
+      "name": "Tomato paste",
+      "quantity": "2 tablespoons",
+      "required": true
+    },
+    {
+      "name": "Dried basil",
+      "quantity": "2 teaspoons",
+      "required": true
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "1 teaspoon",
+      "required": true
+    },
+    {
+      "name": "Salt",
+      "quantity": "1 teaspoon",
+      "required": true
+    },
+    {
+      "name": "Black pepper",
+      "quantity": "1/2 teaspoon",
+      "required": true
+    },
+    {
+      "name": "Ricotta cheese",
+      "quantity": "15 ounces",
+      "required": true
+    },
+    {
+      "name": "Egg",
+      "quantity": "1 large",
+      "required": true
+    },
+    {
+      "name": "Mozzarella cheese, shredded",
+      "quantity": "3 cups",
+      "required": true
+    },
+    {
+      "name": "Parmesan cheese, grated",
+      "quantity": "3/4 cup",
+      "required": true
+    }
+  ]
+}
