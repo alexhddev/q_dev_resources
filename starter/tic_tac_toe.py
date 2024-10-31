@@ -1,6 +1,18 @@
 # Tic-Tac-Toe Game
 
 class TicTacToe:
+    """
+    A class representing a Tic-Tac-Toe game.
+
+    This class implements the game logic for a standard 3x3 Tic-Tac-Toe board.
+    Players take turns placing 'X' and 'O' markers on the board until one player
+    wins or the game ends in a tie.
+
+    Attributes:
+        board (list): A list of 9 elements representing the 3x3 game board.
+                     Empty spaces are represented by ' '.
+        current_player (str): Keeps track of whose turn it is ('X' or 'O').
+    """    
     def __init__(self):
         self.board = [' ' for _ in range(9)]  # 3x3 board
         self.current_player = 'X'
@@ -33,6 +45,22 @@ class TicTacToe:
                 print('---------')
 
 def play_game():
+    """
+    Main game loop function that handles the gameplay of Tic-Tac-Toe.
+
+    This function creates a new TicTacToe game instance and manages the game flow by:
+    - Displaying the current board state
+    - Getting player moves via input
+    - Validating moves
+    - Making moves and checking for a winner
+    - Handling invalid inputs
+    - Announcing the game result
+
+    The game continues until there is either a winner or a tie.
+
+    Returns:
+        None
+    """    
     game = TicTacToe()
     winner = None
 
