@@ -1,42 +1,60 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.score {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.game-over {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
+  z-index: 10;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.game-over button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  gap: 1px;
+  background: #333;
+  border: 2px solid #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.cell {
+  width: 20px;
+  height: 20px;
+  background: #000;
 }
 
-.card {
-  padding: 2em;
+.cell.snake {
+  background: #0f0;
 }
 
-.read-the-docs {
-  color: #888;
+.cell.food {
+  background: #f00;
+  border-radius: 50%;
+}
+
+.controls {
+  margin-top: 20px;
+  color: #666;
 }
